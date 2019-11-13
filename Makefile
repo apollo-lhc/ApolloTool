@@ -8,7 +8,7 @@ all: ${SYM_LINKS}
 	make -C BUTool -f make/Makefile.zynq
 
 BUTool/%:%
-	@ln -s $< $@
+	@ln -s ../../$< $@
 
 clean:
 	@make -C BUTool -f make/Makefile.zynq clean
