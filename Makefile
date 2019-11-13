@@ -4,8 +4,10 @@ LIBRARY_EXCEPTION_OBJECT_FILES =
 PLUGINS= $(wildcard plugins/*)
 SYM_LINKS=$(patsubst %,BUTool/%,${PLUGINS})
 
+FLAGS = $(ifeq $(MAKEFLAGS) "","",-$(MAKEFLAGS))
+
 all: ${SYM_LINKS}
-	make -C BUTool -f make/Makefile.zynq
+	$(MAKE) ${FLAGS} -C BUTool -f make/Makefile.zynq
 
 BUTool/%:%
 	@ln -s ../../$< $@
