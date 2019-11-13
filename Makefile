@@ -7,5 +7,9 @@ SYM_LINKS=$(patsubst %,BUTool/%,${PLUGINS})
 all: ${SYM_LINKS}
 	make -C BUTool -f make/Makefile.zynq
 
-%:BUTool/%
-	ln -s $@ $<
+BUTool/%:%
+	@ln -s $< $@
+
+clean:
+	@make -C BUTool -f make/Makefile.zynq clean
+	@rm -rf ${SYM_LINKS}
