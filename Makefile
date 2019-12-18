@@ -7,9 +7,13 @@ SYM_LINKS=$(patsubst %,BUTool/%,${PLUGINS})
 FLAGS = $(ifeq $(MAKEFLAGS) "","",-$(MAKEFLAGS))
 
 
+all: cc
 
-all: ${SYM_LINKS}
+cc: ${SYM_LINKS}
 	$(MAKE) ${FLAGS} -C BUTool -f make/Makefile.zynq
+
+local: ${SYM_LINKS}
+	$(MAKE) ${FLAGS} -C BUTool -f make/Makefile.x86
 
 init: 
 	git submodule update --init --recursive
