@@ -21,6 +21,9 @@ init:
 BUTool/%:%
 	@ln -s ../../$< $@
 
+install: 
+	$(MAKE) install ${FLAGS} -C BUTool -f make/Makefile.x86
+
 clean:
 	@make -C BUTool -f make/Makefile.zynq clean
 	@rm -rf ${SYM_LINKS}
