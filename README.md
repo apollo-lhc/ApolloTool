@@ -9,13 +9,18 @@ Currently this adds the BUTool-IPBus-helpers, ApolloSM_plugin, and genericIPBus_
 * boost-devel
 * readline-devel
 * ld
+* uHAL (with plugin support)
+* UIOuHAL plugin
 
-### How-to (in the end)
-* make
-* cd BUTool; ZYNQ_IP=1.2.3.4 ./make/copyZynq.sh
-* Yay! you are done!
+### Zynq build via SM_ZYNQ_FW CentOS makefile
+* cd SM_ZYNQ_FW/os/centos
+* make (builds full centos image for zynq including this repo)
 
-### How-to currently 
+### "local" x86 (for syntax checking)
+* make local
+
+
+### How-to old with cross-compile
 * Build the petalinux image for the Apollo SM via https://github.com/apollo-lhc/SM_ZYNQ_FW
 * Mount the ext4 image generated from that in /mnt
 * Build the feature-UIOuHAL branch from https://github.com/dgastler/ipbus-software
