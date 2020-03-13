@@ -7,7 +7,7 @@ SYM_LINKS=$(patsubst %,BUTool/%,${PLUGINS})
 FLAGS = $(ifeq $(MAKEFLAGS) "","",-$(MAKEFLAGS))
 
 
-all: cc
+all: local
 
 cc: ${SYM_LINKS}
 	$(MAKE) ${FLAGS} -C BUTool -f make/Makefile.zynq
