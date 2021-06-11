@@ -1,1 +1,17 @@
 
+[submodule "BUTool"]
+	path = BUTool
+	url = https://github.com/ammitra/BUTool.git
+	branch = feature-BUTextIO
+[submodule "plugins/ApolloSM_plugin"]
+	path = plugins/ApolloSM_plugin
+	url = https://github.com/ammitra/ApolloSM_plugin.git
+	branch = feature-BUTextIO
+[submodule "plugins/GenericIPBus_plugin"]
+	path = plugins/GenericIPBus_plugin
+	url = https://github.com/ammitra/GenericIPBus_plugin.git
+	branch = feature-BUTextIO
+[submodule "plugins/BUTool-IPBUS-Helpers"]
+	path = plugins/BUTool-IPBUS-Helpers
+	url = https://github.com/ammitra/BUTool-IPBUS-Helpers.git
+	branch = feature-BUTextIO
