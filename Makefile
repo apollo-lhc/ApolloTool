@@ -6,7 +6,7 @@ SYM_LINKS=$(patsubst %,BUTool/%,${PLUGINS})
 
 FLAGS = $(ifeq $(MAKEFLAGS) "","",-$(MAKEFLAGS))
 
-UIO_UHAL_PATH ?= $(CACTUS_ROOT)../UIOuHAL/
+UIO_UHAL_PATH ?= $(CACTUS_ROOT)/../UIOuHAL/
 
 export CACTUS_ROOT
 export UIO_UHAL_PATH
