@@ -27,6 +27,9 @@ init:
 BUTool/%:%
 	@ln -s ../../$< $@
 
+links: ${SYM_LINKS}
+
+
 install: 
 	$(MAKE) install ${FLAGS} -C BUTool -f mk/Makefile.local
 
