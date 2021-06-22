@@ -7,3 +7,11 @@
 	path = plugins/GenericIPBus_plugin
 	url = https://github.com/BU-Tools/GenericIPBus_plugin.git
 	branch = feature-BUTextIO
+[submodule "plugins/ApolloSM_plugin.git"]
+	path = plugins/ApolloSM_plugin.git
+	url = https://github.com/apollo-lhc/ApolloSM_plugin.git
+	branch = develop
+[submodule "plugins/BUTool-IPBUS-Helpers"]
+	path = plugins/BUTool-IPBUS-Helpers
+	url = https://github.com/BU-Tools/BUTool-IPBUS-Helpers.git
+	branch = develop
