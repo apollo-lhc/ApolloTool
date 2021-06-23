@@ -2,11 +2,11 @@
 [submodule "BUTool"]
 	path = BUTool
 	url = https://github.com/BU-Tools/BUTool.git
-	branch = feature-BUTextIO
+	branch = develop
 [submodule "plugins/GenericIPBus_plugin"]
 	path = plugins/GenericIPBus_plugin
 	url = https://github.com/BU-Tools/GenericIPBus_plugin.git
-	branch = feature-BUTextIO
+	branch = develop
 [submodule "plugins/ApolloSM_plugin.git"]
 	path = plugins/ApolloSM_plugin.git
 	url = https://github.com/apollo-lhc/ApolloSM_plugin.git
