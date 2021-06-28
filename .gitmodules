@@ -1,8 +1,3 @@
-
-[submodule "BUTool"]
-	path = BUTool
-	url = https://github.com/BU-Tools/BUTool.git
-	branch = develop
 [submodule "plugins/GenericIPBus_plugin"]
 	path = plugins/GenericIPBus_plugin
 	url = https://github.com/BU-Tools/GenericIPBus_plugin.git
@@ -10,8 +5,4 @@
 [submodule "plugins/ApolloSM_plugin.git"]
 	path = plugins/ApolloSM_plugin
 	url = https://github.com/apollo-lhc/ApolloSM_plugin.git
-	branch = develop
-[submodule "plugins/BUTool-IPBUS-Helpers"]
-	path = plugins/BUTool-IPBUS-Helpers
-	url = https://github.com/BU-Tools/BUTool-IPBUS-Helpers.git
 	branch = develop
