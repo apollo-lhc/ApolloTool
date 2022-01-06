@@ -8,6 +8,8 @@ FLAGS = $(ifeq $(MAKEFLAGS) "","",-$(MAKEFLAGS))
 
 UIO_UHAL_PATH ?= $(CACTUS_ROOT)/../UIOuHAL/
 
+MAKE_PATH=$(abspath ./BUTool)
+export MAKE_PATH
 export CACTUS_ROOT
 export UIO_UHAL_PATH
 #FLAGS += CACTUS_ROOT=$(CACTUS_ROOT)
@@ -19,10 +21,11 @@ cc: ${SYM_LINKS}
 	$(MAKE) ${FLAGS} -C BUTool -f mk/Makefile.crosscompile
 
 local: ${SYM_LINKS}
-	$(MAKE) ${FLAGS} -C BUTool -f mk/Makefile.local
+	$(MAKE) ${FLAGS} -C BUTool -f Makefile
 
 init: 
 	git submodule update --init --recursive
+        $(git remote -v | grep push | sed 's/https:\/\//git@/g' | sed 's/.com\//.com:/g' | awk '{print "git remote set-url --push " $1 " " $2}')
 
 BUTool/%:%
 	@ln -s ../../$< $@
@@ -34,5 +37,5 @@ install:
 	$(MAKE) install ${FLAGS} -C BUTool -f mk/Makefile.local
 
 clean:
-	@$(MAKE) ${FLAGS} -C BUTool -f mk/Makefile.crosscompile clean
+	@$(MAKE) ${FLAGS} -C BUTool -f Makefile clean
 	@rm -rf ${SYM_LINKS}
