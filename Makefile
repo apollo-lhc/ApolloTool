@@ -40,7 +40,7 @@ links: ${SYM_LINKS}
 
 
 install: 
-	$(MAKE) install ${FLAGS} -C BUTool -f mk/Makefile.local
+	$(MAKE) install ${FLAGS} -C BUTool -f mk/Makefile
 
 clean:
 	@$(MAKE) ${FLAGS} -C BUTool -f Makefile clean
