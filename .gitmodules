@@ -13,5 +13,5 @@
 [submodule "plugins/ApolloSM_plugin"]
 	path = plugins/ApolloSM_plugin
 	url = https://github.com/alpakpinar/ApolloSM_plugin.git
-	branch = feature/reghelper
+	branch = feature/smart_pointer
 
