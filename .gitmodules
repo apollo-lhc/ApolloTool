@@ -4,14 +4,14 @@
 	branch = develop
 [submodule "plugins/BUTool-IPBUS-Helpers"]
 	path = plugins/BUTool-IPBUS-Helpers
-	url = https://github.com/alpakpinar/BUTool-IPBUS-Helpers.git
-	branch = feature/reghelper
+	url = https://github.com/BU-Tools/BUTool-IPBUS-Helpers.git
+	branch = feature/reg_helper_converts
 [submodule "BUTool"]
 	path = BUTool
-	url = https://github.com/alpakpinar/BUTool.git
+	url = https://github.com/BU-Tools/BUTool.git
 	branch = feature/reg_helper_converts
 [submodule "plugins/ApolloSM_plugin"]
 	path = plugins/ApolloSM_plugin
-	url = https://github.com/alpakpinar/ApolloSM_plugin.git
-	branch = feature/smart_pointer
+	url = https://github.com/apollo-lhc/ApolloSM_plugin.git
+	branch = feature/reg_helper_converts
 
