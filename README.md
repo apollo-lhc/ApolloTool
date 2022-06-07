@@ -29,6 +29,18 @@ Currently this adds the BUTool-IPBus-helpers, ApolloSM_plugin, and genericIPBus_
 * cd BUTool; ZYNQ_IP=1.2.3.4 ./make/copyZynq.sh
 * Yay! you are done!
 
+### StatusDisplay name parser for BUTool
+
+Currently, there are two versions of name parsers (for row and column names in status tables) used in `BUTool::StatusDisplay` class:
+
+**Older version:** Will treat a single underscore character (`'_'`) in the beginning as a spcecial character. As an example, if we had a register with name `A.B.C.D` and parameter `Row=_3`, the row name for this register would be `C`. 
+
+**Newer version:** Will treat double and triple underscore characters as special. Double underscore replaces the single underscore functionality in the older version, while triple underscore implies a reverse count. Using the same example from before, if we had a register with name `A.B.C.D`, the following is true:
+
+- If this register specifies `Row=__3`, the row name would be `C`.
+- If this register specifies `Row=___3`, the row name would be `B`.
+
+By default, when the `BUTool::StatusDisplay` class parses the XML address table, it will use the older version of the name parser. This behavior can be updated by using a compile-time flag however, called `BUTOOL_SD_USE_NEW_PARSER`. To use the new name parser, the user can simply add `BUTOOL_SD_USE_NEW_PARSER=true` to the `make` command while building `ApolloTool`.
 
 ### TODO
 * Simplify the petalinux image use by downloading tagged releases of the system images. 

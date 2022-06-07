@@ -11,12 +11,14 @@ UIO_UHAL_PATH ?= $(CACTUS_ROOT)/../UIOuHAL/
 
 MAKE_PATH=$(abspath ./BUTool)
 
-BUTOOL_SD_NEW ?= false
+# BUTool compile-time flag to specify to use the new StatusDisplay
+# name parser for row and column names (defaults to False)
+BUTOOL_SD_USE_NEW_PARSER ?= false
 
 export MAKE_PATH
 export CACTUS_ROOT
 export UIO_UHAL_PATH
-export BUTOOL_SD_NEW 
+export BUTOOL_SD_USE_NEW_PARSER 
 #FLAGS += CACTUS_ROOT=$(CACTUS_ROOT)
 #FLAGS += UIO_UHAL_PATH=$(UIO_UHAL_PATH)
 
