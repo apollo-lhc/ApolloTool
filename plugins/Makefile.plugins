@@ -1,7 +1,0 @@
-export CACTUS_ROOT
-export UIO_UHAL_PATH
-
-ApolloSM_plugin: BUTool-IPBUS-Helpers  
-	 ${MAKE} ${FLAGS} -C $@ 
-GenericIPBus_plugin: BUTool-IPBUS-Helpers  
-	 ${MAKE} ${FLAGS} -C $@ 
